@@ -94,6 +94,7 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
+  -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
   /* 2 */
 }
@@ -384,6 +385,17 @@ template {
   box-sizing: border-box;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 html {
   height: 100%;
 }
@@ -393,6 +405,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
+  color: #FFFFFF;
 }
 
 .container {
@@ -418,11 +431,14 @@ body {
 }
 
 .header__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 206px;
   height: 39px;
   border-radius: 5px;
   background-color: #A5C7F9;
-  color: #FFFFFF;
+  color: inherit;
   border: transparent;
   cursor: pointer;
   font-size: 20px;
@@ -454,13 +470,12 @@ body {
   position: relative;
 }
 
-.block-1__item::after{
+.block-1__item::after {
   content: '1';
   position: absolute;
   top: calc(50% - 31px);
   left: calc(50% - 15px);
   font-size: 53px;
-  color: #FFFFFF;
 }
 
 .block-1__item:nth-child(2):after {
@@ -494,4 +509,52 @@ body {
   width: 25%;
   aspect-ratio: 9/7;
   background-color: #0D89B0;
+}
+
+.pop-up {
+  display: none;
+  position: absolute;
+  top: 10%;
+  left: 25%;
+  height: 400px;
+  width: 400px;
+  background-color: #FFFFFF;
+  z-index: 300;
+  justify-content: center;
+  align-items: center;
+}
+
+.pop-up__span {
+  font-size: 53px;
+  color: #000000;
+}
+
+.pop-up__btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: #FFFFFF;
+  font-size: 20px;
+  width: 43px;
+  height: 39px;
+  border-radius: 5px;
+  background-color: #7FAFF6;
+  border: transparent;
+  transition: all 0.3s;
+}
+
+.pop-up__btn:hover {
+  background-color: #0D89B0;
+}
+
+.header__checkbox:checked+.pop-up {
+  display: flex;
+}
+
+.pop-up:has(.pop-up__checkbox:checked) {
+  display: none;
 }

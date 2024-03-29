@@ -13,26 +13,49 @@
         <title>Document</title>
     </head>
     <body>
-      <div class="container">
-        <header class="header">
-          <button class="header__btn">Open pop-up button</button>
-        </header>
-        <main class="main">
-          <div class="block-1">
-            <div class="block-1__item"></div>
-            <div class="block-1__item"></div>
-            <div class="block-1__item"></div>
-            <div class="block-1__item"></div>
-            <div class="block-1__item"></div>
-          </div>
-          <div class="block-2">
-            <div class="block-2__item"></div>
-            <div class="block-2__item"></div>
-            <div class="block-2__item"></div>
-            <div class="block-2__item"></div>
-          </div>
-        </main>
-        <footer class="footer"></footer>
-      </div>
+        <div class="container">
+            <header class="header">
+                <label
+                    class="header__btn"
+                    for="checkbox"
+                    role="button"
+                    tabindex="0"
+                    >Open pop-up button</label
+                >
+                <input
+                    class="header__checkbox visually-hidden"
+                    type="checkbox"
+                    name="checkbox"
+                    id="checkbox"
+                />
+                <div class="pop-up">
+                    <label
+                        class="pop-up__btn"
+                        for="checkbox"
+                        role="button"
+                        tabindex="0"
+                        aria-label="close pop-up"
+                        >&#9747;</label
+                    >
+                    <span class="pop-up__span">Pop-up</span>
+                </div>
+            </header>
+            <main class="main">
+                <div class="block-1">
+                    <div class="block-1__item"></div>
+                    <div class="block-1__item"></div>
+                    <div class="block-1__item"></div>
+                    <div class="block-1__item"></div>
+                    <div class="block-1__item"></div>
+                </div>
+                <div class="block-2">
+                    <div class="block-2__item"></div>
+                    <div class="block-2__item"></div>
+                    <div class="block-2__item"></div>
+                    <div class="block-2__item"></div>
+                </div>
+            </main>
+            <footer class="footer"></footer>
+        </div>
     </body>
 </html>
