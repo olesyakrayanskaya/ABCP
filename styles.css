@@ -558,3 +558,29 @@ body {
 .pop-up:has(.pop-up__checkbox:checked) {
   display: none;
 }
+
+@media (max-width: 576px) {
+
+  .pop-up {
+    top: 10%;
+    left: 40px;
+    height: 300px;
+    width: 300px;
+  }
+
+}
+
+@media (max-width: 383px) {
+
+  .pop-up {
+    top: 10%;
+    left: 15px;
+    height: 280px;
+    width: 280px;
+  }
+
+  .pop-up__span {
+    font-size: 47px;
+  }
+
+}
